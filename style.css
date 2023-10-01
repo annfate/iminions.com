@@ -1,0 +1,5740 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+header{
+    background-color: transparent;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 60%;
+    min-height: 100px;
+    max-height: 100px;
+    margin-left: 20%;
+    border-radius: 50% 50% 0 0; 
+    transition: background-color 0.4s ease-in-out;
+}
+header.scrolled{
+    background-color: #4a6985;
+    min-height: 70px;
+    border-radius: 0px;
+    transform: skew(-20deg);
+    opacity: 0.98;
+    z-index: 10000;
+}
+.navbar{
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    width: 0; 
+    z-index: 1000;
+}
+.bg{
+    min-height: 100vh;
+    max-width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.logo img{
+    margin-top: 10px;
+    margin-left: 100px;
+    height: 120px;
+    width: 120px;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-left: 50%;
+}
+.navbar ul li{
+    margin-top: -20px;
+    padding: 1.5em;
+}
+.navbar ul li a{
+    color: #fad96d;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+}
+.navbar ul li a:hover{
+    color: violet;
+}
+header.scrolled nav a{
+    color: #fad96d;
+    transform: skew(20deg);
+    font-weight: bold;
+}
+header.scrolled .logo img{
+    transform: skew(20deg);
+}
+#button{
+    background-color: transparent;
+    border: none;
+    color: #fad96d;
+    cursor: pointer;
+}
+#links{
+    list-style: none;
+}
+#links li{
+    display: none;
+}
+#links a{
+    text-decoration: none;
+    color: #fad96d;
+}
+@media screen and (max-width:1919px) and (min-width:1800px) {
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .info{
+        position: relative;
+        bottom: 2vh;
+    }
+    #inner{
+        top: 8.5rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 10vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 60vw;
+    }
+    #name_bob{
+        right: 53vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 65vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 12vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: 10vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: 10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        bottom: 10vh;
+    }
+    .cards{
+        margin-top: -10vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 50vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -10vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        top: 10vh;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 10vh;
+    }
+    .footer-col ul li a{
+        font-size: 1.7rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 15vh;
+        margin-right: -2vw;
+    }
+    #giphy2{
+        top: 15vh;
+        margin-left: -10vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -5vh;
+    }
+}
+@media screen and (max-width:1799px) and (min-width:1699px) {
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .info{
+        position: relative;
+        bottom: 8vh;
+    }
+    #inner{
+        top: 7.7rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 10vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 60vw;
+    }
+    #name_bob{
+        right: 53vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 65vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 12vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: 10vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: 10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        bottom: 10vh;
+    }
+    .cards{
+        margin-top: -10vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 50vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -10vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        top: 10vh;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 10vh;
+    }
+    .footer-col ul li a{
+        font-size: 1.7rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 15vh;
+        margin-right: -2vw;
+    }
+    #giphy2{
+        top: 15vh;
+        margin-left: -10vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -5vh;
+    }
+}
+@media screen and (max-width:1698px) and (min-width:1598px) {
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .info{
+        position: relative;
+        bottom: 10vh;
+    }
+    #inner{
+        top: 6.5rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 10vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 60vw;
+    }
+    #name_bob{
+        right: 53vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 65vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 9vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: 10vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: 10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        bottom: 10vh;
+    }
+    .cards{
+        margin-top: -10vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 50vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -10vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        top: 10vh;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 10vh;
+    }
+    .footer-col ul li{
+        margin-left: 1vw;
+    }
+    .footer-col ul li a{
+        font-size: 1.7rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 15vh;
+        margin-right: -4vw;
+    }
+    #giphy2{
+        top: 15vh;
+        margin-left: -10vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -5vh;
+    }
+    #overlay2{
+        overflow: auto;
+    }
+}
+@media screen and (max-width:1597px) and (min-width:1497px) {
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .info{
+        position: relative;
+        bottom: 10vh;
+    }
+    #inner{
+        top: 3rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 10vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 60vw;
+    }
+    #name_bob{
+        right: 53vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 65vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 2vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: 10vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: 10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        bottom: 10vh;
+    }
+    .cards{
+        margin-top: -10vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 50vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -10vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        top: 10vh;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 10vh;
+    }
+    .footer-col ul li{
+        margin-left: 1vw;
+    }
+    .footer-col ul li a{
+        font-size: 1.7rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 15vh;
+        margin-right: -4vw;
+    }
+    #giphy2{
+        top: 15vh;
+        margin-left: -10vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -5vh;
+    }
+    #overlay2{
+        overflow: auto;
+    }
+}
+@media screen and (max-width:1496px) and (min-width:1396px) {
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .info{
+        position: relative;
+        bottom: 10vh;
+    }
+    #inner{
+        top: 2.5rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 10vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 60vw;
+    }
+    #name_bob{
+        right: 53vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 65vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 2vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: 10vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: 10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        bottom: 10vh;
+    }
+    .cards{
+        margin-top: -10vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 50vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -10vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        top: 10vh;
+        margin-left: -4vw;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 10vh;
+    }
+    .footer-col ul li{
+        margin-left: -2vw;
+    }
+    .footer-col ul li a{
+        font-size: 2rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 15vh;
+        margin-right: -5vw;
+    }
+    #giphy2{
+        top: 15vh;
+        margin-left: -10vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -5vh;
+    }
+    #overlay2{
+        overflow: scroll;
+    }
+}
+@media screen and (max-width:1395px) and (min-width:1304px) {
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .info{
+        position: relative;
+        bottom: 10vh;
+    }
+    #inner{
+        top: 2.5rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 10vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 60vw;
+    }
+    #name_bob{
+        right: 53vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 65vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 2vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: 10vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: 10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        bottom: 10vh;
+    }
+    .cards{
+        margin-top: -10vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 50vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -10vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        top: 10vh;
+        margin-left: -5vw;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 10vh;
+    }
+    .footer-col ul li{
+        margin-left: -3vw;
+    }
+    .footer-col ul li a{
+        font-size: 1.7rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 20vh;
+        margin-right: -8vw;
+    }
+    #giphy2{
+        top: 20vh;
+        margin-left: -10vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -5vh;
+    }
+    #overlay2{
+        overflow: scroll;
+    }
+}
+@media screen and (max-width:1303px) and (min-width:1101px){
+    header{
+        background-color: transparent;
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        min-height: 100px;
+        max-height: 100px;
+        margin-left: 20%;
+        border-radius: 50% 50% 0 0; 
+        transition: background-color 0.4s ease-in-out;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .logo img{
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 120px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 46vh;
+    }
+    #inner{
+        top: 10.5rem;
+    }
+    #meet_stuart{
+        right: 60vw;
+    }
+    #name_stuart{
+        right: 45vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: 10vw;
+        right: 30vw;
+        width: 250px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute;
+        bottom: 20vh; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 16vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 10vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 70vh;
+    }
+    #name_bob{
+        right: 60vh;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 11vw;
+        right: 63.5vw;
+        width: 250px;
+        font-size: 17px;
+    }
+    .card3{
+        top: -10vh;
+    }
+    #bob2{
+        max-height: 70vh;
+        max-width: 70vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 20px;
+        margin-top: 15vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 12vh;
+        margin-left: 400px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 55vw;
+    }
+    #name_kevin{
+        right: 45vw;
+    }
+    .card4{
+        bottom: 10vh;
+    }
+    .card4 p{
+        margin-right: -6vw;
+        right: 49vw;
+        width: 200px;
+        font-size: 17px;
+        top: -2vh;
+    }
+    #kevin2{
+        max-height: 70vh;
+        max-width: 70vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+    }
+    #play3{
+        margin-top: 10vh;
+        left: 65vh;
+    }
+    #meet_otto{
+        right: 70vw;
+    }
+    #name_otto{
+        right: 60vw;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 55vw;
+        width: 300px;
+        font-size: 17px;
+    }
+    .card5{
+        bottom: 15vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+
+    }
+    #otto2{
+        max-height: 70vh;
+        max-width: 70vh;
+        right: 5vw;
+        margin-top: -5vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: -10vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #overlay{
+        overflow: scroll;
+    }
+    #overlay2{
+        overflow: scroll;
+    }
+    .palabas{
+        position: relative;
+        bottom: 46vh;
+    }
+    .cards{
+        margin-top: -46vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 80vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -17vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 2.5rem;
+        bottom: 20vh;
+        left: -6vw;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: -20vh;
+        margin-left: -6vw;
+    }
+    .footer-col ul li{
+        margin-left: -3vw;
+    }
+    .footer-col ul li a{
+        font-size: 1.7rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 10vh;
+        margin-right: -20vw;
+    }
+    #giphy2{
+        top: 10vh;
+        margin-left: -20vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -7vh;
+    }
+}
+@media screen and (max-width:1100px) and (min-width:916px){
+    header{
+        background-color: transparent;
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        min-height: 100px;
+        max-height: 100px;
+        margin-left: 20%;
+        border-radius: 50% 50% 0 0; 
+        transition: background-color 0.4s ease-in-out;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .logo img{
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar .main{
+        display: flex;
+        position: relative;
+        right: 165px;
+    }
+    #button{
+        display: none;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 71vh;
+    }
+    #inner{
+        top: 19rem;
+    }
+    .container2::before{
+        top: 13vh;
+    }
+    #meet_stuart{
+        right: 50vw;
+    }
+    #name_stuart{
+        right: 30vw;
+    }
+    #stuart2{
+        max-height: 70vh;
+        max-width: 70vw;
+        margin-top: 15vh;
+    }
+    .card2 p{
+        margin-right: -10vw;
+        right: 40vw;
+        width: 250px;
+        font-size: 17px;
+        top: 3.2vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 20vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 25vh;
+        left: 30vw;
+    }
+    #watch{
+        margin-top: 15vh;
+        margin-left: -10vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        right: 70vw;
+    }
+    #name_bob{
+        right: 60vw;
+        top: 1vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 55.5vw;
+        width: 300px;
+        font-size: 17px;
+        top: 5vh;
+    }
+    .card3{
+        top: -12vh;
+    }
+    #bob2{
+        max-height: 50vh;
+        max-width: 50vh;
+        left: 15px;
+        margin-top: -10vh;
+    }
+    #watch2{
+        margin-left: 35vw;
+        font-size: 20px;
+        margin-top: -10vh;
+    }
+    #play2{
+        margin-top: -3vh;
+        margin-left: 450px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        right: 44vw;
+    }
+    #name_kevin{
+        right: 30vw;
+    }
+    .card4{
+        bottom: 18vh;
+    }
+    .card4 p{
+        margin-right: -17vw;
+        right: 59vw;
+        width: 200px;
+        font-size: 17px;
+        top: 5vh;
+    }
+    #kevin2{
+        max-height: 50vh;
+        max-width: 50vh;
+        margin-top: 12vh;
+    }
+    #watch3{
+        margin-left: -10vw;
+        width: 400px;
+        margin-top: 10vh;
+    }
+    #play3{
+        margin-top: 20vh;
+        left: 40vw;
+    }
+    #meet_otto{
+        top: 10vh;
+        right: 60vw;
+    }
+    #name_otto{
+        top: 10vh;
+        right: 40vw;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 51vw;
+        width: 300px;
+        font-size: 17px;
+        top: 14vh;
+    }
+    .card5{
+        bottom: 28vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 40vh;
+        max-width: 40vh;
+        right: 5vw;
+        margin-top: 40vh;
+    }
+    #watch4{
+        margin-right: 20vw;
+        font-size: 20px;
+        margin-top: 4vh;
+    }
+    #play4{
+        margin-top: 12vh;
+        margin-left: 100px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #overlay{
+        overflow: scroll;
+    }
+    #overlay2{
+        overflow: scroll;
+    }
+    .palabas{
+        position: relative;
+        bottom: 71vh;
+    }
+    .cards{
+        margin-top: -71vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 100vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -3vh;
+    }
+    .footer-col h4{
+        position: relative;
+        font-size: 3rem;
+        top: -20vh;
+        left: -9vw;
+    }
+    .footer-col ul{
+        margin-top: -20vh;
+        margin-left: -7vw;
+    }
+    .footer-col ul li{
+        margin-left: -4vw;
+    }
+    .footer-col ul li a{
+        font-size: 1.5rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        top: 10vh;
+        margin-right: -20vw;
+    }
+    #giphy2{
+        top: 10vh;
+        margin-left: -20vw;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -7vh;
+    }
+    .slider-wrapper{
+        bottom: -10vh;
+        height: 80vh;
+    }
+    .slider-nav a{
+        margin-top: -40vh;
+    }
+}
+@media screen and (max-width:915px) {
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 50%;
+        margin-left: 25%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    header::-webkit-scrollbar{
+        display: none;
+    }
+    header.scrolled{
+        background-color: #4a6985;
+        min-height: 50px;
+        border-radius: 0px;
+        transform: skew(0deg);
+    }
+    header.scrolled nav a{
+        color: #fad96d;
+        transform: skew(0deg);
+        font-weight: bold;
+    }
+    header.scrolled .logo img{
+        transform: skew(0deg);
+    }
+    .logo img{
+        height: 100px;
+        width: 100px;
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: 5px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .card2 a{
+        font-size: 10px;
+    }
+    .info{
+        position: relative;
+        bottom: 70vh;
+    }
+    #inner{
+        position: absolute;
+        top: 13.6rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 40vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 65vw;
+        width: 130px;
+        font-size: 17px;
+        top: -7vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 20vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 6vh;
+        left: 40vw;
+    }
+    #stuart2{
+        max-height: 30vh;
+        max-width: 30vh;
+        margin-left: 40vw;
+        margin-top: 20vh;
+    }
+    #watch{
+        margin-top: 2vh;
+        margin-left: -15vw;
+        font-size: 20px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 40vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 65vw;
+        width: 130px;
+        font-size: 17px;
+        top: -7vh;
+    }
+    .card3{
+        top: -30vh;
+    }
+    #bob2{
+        max-height: 30vh;
+        max-width: 30vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 30vw;
+        font-size: 20px;
+        margin-top: 2vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 320px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 40vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 59vw;
+        width: 100px;
+        font-size: 17px;
+        top: -7vh;
+    }
+    .card4{
+        bottom: 25vh;
+    }
+    #kevin2{
+        max-height: 30vh;
+        max-width: 30vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 20px;
+        width: 250px;
+        margin-top: 5vh;
+    }
+    #play3{
+        margin-top: 3vh;
+        margin-left: 70px;
+        left: 35vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+        top: -10vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: -10vh;
+        right: 40vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 59vw;
+        width: 100px;
+        font-size: 17px;
+        top: -15vh;
+    }
+    .card5{
+        bottom: 25vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 30vh;
+        max-width: 30vh;
+        right: 5vw;
+        margin-top: 20vh;
+    }
+    #watch4{
+        margin-top: -10vh;
+        margin-left: -5vw;
+        font-size: 20px;
+    }
+    #play4{
+        margin-top: -4vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+        z-index: 1;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una h2{
+        font-size: 2rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 1.5rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 100vh;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 1.3rem;
+        position: absolute;
+        top: -7vh;
+        left: -3vh;
+        width: 40rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 1.2rem;
+        position: absolute;
+        top: 5vh;
+        left: -2vh;
+        width: 40rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 100vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -80vh;
+    }
+    .footer-col h4{
+        position: absolute;
+        font-size: 3rem;
+        top: -20vh;
+        left: -10vw;
+    }
+    .footer-col ul{
+        margin-top: -20vh;
+        margin-left: -12vw;
+    }
+    .footer-col ul li{
+        margin-left: -5vw;
+    }
+    .footer-col ul li a{
+        font-size: 2rem;  
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .logos-slide{
+        margin-top: -7vh;
+    }
+    
+}
+@media screen and (max-width:832px){
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    .logo img{
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-left: 115px;
+        margin-top: 24px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 70vh;
+    }
+    #inner{
+        position: absolute;
+        top: 10.5rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 43vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 65vw;
+        width: 130px;
+        font-size: 15px;
+        top: -5vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 17vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 2vh;
+        left: 30vw;
+    }
+    #stuart2{
+        max-height: 30vh;
+        max-width: 30vh;
+        margin-left: 40vw;
+        margin-top: 10vh;
+    }
+    #watch{
+        margin-top: -3vh;
+        margin-left: -10vw;
+        font-size: 15px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 43vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 65vw;
+        width: 130px;
+        font-size: 15px;
+        top: -5vh;
+    }
+    .card3{
+        top: -20vh;
+    }
+    #bob2{
+        max-height: 30vh;
+        max-width: 30vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 30vw;
+        font-size: 15px;
+        margin-top: 2vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 300px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+        z-index: 1;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 43vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 59vw;
+        width: 100px;
+        font-size: 15px;
+        top: -5vh;
+    }
+    .card4{
+        bottom: 30vh;
+    }
+    #kevin2{
+        max-height: 30vh;
+        max-width: 30vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 15px;
+        width: 200px;
+        margin-top: 4vh;
+    }
+    #play3{
+        margin-top: 9vh;
+        margin-left: 70px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 45vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 43vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 59vw;
+        width: 100px;
+        font-size: 15px;
+    }
+    .card5{
+        bottom: 17vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 30vh;
+        max-width: 30vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -2vh;
+        margin-right: 20vw;
+        font-size: 15px;
+    }
+    #play4{
+        margin-top: 5vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1.5rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 0.9rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15vh;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 1.2rem;
+        position: absolute;
+        top: -15vh;
+        left: -4vh;
+        width: 40rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 1rem;
+        position: absolute;
+        top: -1vh;
+        left: -3vh;
+        width: 40rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .footer_bg{
+        min-height: 30vh;
+        opacity: 0.5;
+    }
+    .footer{
+        margin-top: -106vh;
+    }
+    .footer-col h4{
+        position: relative;
+        top: 17vh;
+        font-size: 2rem;
+        left: -12vh;
+    }
+    .footer-col ul li a{
+        font-size: 1.5rem; 
+    }
+    .footer-col ul li{
+        margin-left: -5vw;
+    }
+    .footer-col ul{
+        position: absolute;
+        margin-top: 17vh;
+        margin-left: -22vh;
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    .logos{
+        height: 10vh;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .stuart-vid{
+        width: 700px;
+    }
+    .trailer{
+        position: relative;
+        min-width: 100%;
+    }
+    .bob-vid{
+        width: 700px;
+    }
+    .trailer2{
+        position: relative;
+        min-width: 100%;
+    }
+    .kevin-vid{
+        width: 700px;
+    }
+    .trailer3{
+        position: relative;
+        min-width: 100%;
+    }
+    .otto-vid{
+        width: 700px;
+    }
+    .trailer4{
+        position: relative;
+        min-width: 100%;
+    }
+}
+@media screen and (max-width:682px) {
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    .logo img{
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-left: 70px;
+        margin-top: 24px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 71vh;
+    }
+    #inner{
+        position: absolute;
+        top: 4.5rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 65vw;
+        width: 130px;
+        font-size: 10px;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 5vh;
+        left: 5vw;
+    }
+    #stuart2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 40vw;
+        margin-top: 20vh;
+    }
+    #watch{
+        margin-top: -3vh;
+        margin-left: -35vw;
+        font-size: 10px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 53vw;
+        width: 130px;
+        font-size: 10px;
+    }
+    .card3{
+        top: -20vh;
+    }
+    #bob2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 10px;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 51vw;
+        width: 100px;
+        font-size: 10px;
+    }
+    .card4{
+        bottom: 15vh;
+    }
+    #kevin2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 10px;
+        width: 150px;
+        margin-top: -3vh;
+    }
+    #play3{
+        margin-top: 7vh;
+        margin-left: 70px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 50vw;
+        width: 100px;
+        font-size: 10px;
+    }
+    .card5{
+        bottom: 6vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -5vh;
+        margin-right: 20vw;
+        font-size: 10px;
+    }
+    #play4{
+        margin-bottom: 10vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1.5rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 0.75rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: -20vh;
+        left: -2vh;
+        width: 30rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+        overflow: scroll;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: 2vh;
+        left: -4vh;
+        width: 30rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .slider-wrapper{
+        top: 5vh;
+        height: 50vh;
+        width: 90vw;
+    }
+    .slider img{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider-nav a{
+        margin-bottom: 12vh;
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .logos{
+        height: 10vh;
+    }
+}
+@media screen and (max-width:601px) {
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    .logo img{
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 76vh;
+    }
+    #inner{
+        position: absolute;
+        top: 0.5rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 54vw;
+        width: 130px;
+        font-size: 10px;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 2vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 5vh;
+        left: 5vw;
+    }
+    #stuart2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 40vw;
+        margin-top: 20vh;
+    }
+    #watch{
+        margin-top: -3vh;
+        margin-left: -35vw;
+        font-size: 10px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 53vw;
+        width: 130px;
+        font-size: 10px;
+    }
+    .card3{
+        top: -20vh;
+    }
+    #bob2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 10px;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 51vw;
+        width: 100px;
+        font-size: 10px;
+    }
+    .card4{
+        bottom: 15vh;
+    }
+    #kevin2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 10px;
+        width: 150px;
+        margin-top: -3vh;
+    }
+    #play3{
+        margin-top: 7vh;
+        margin-left: 70px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 50vw;
+        width: 100px;
+        font-size: 10px;
+    }
+    .card5{
+        bottom: 2vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -5vh;
+        margin-right: 20vw;
+        font-size: 10px;
+    }
+    #play4{
+        margin-bottom: 10vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1.5rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 0.75rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: -20vh;
+        left: -5vh;
+        width: 30rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+        overflow: scroll;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: 2vh;
+        left: -5vh;
+        width: 30rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .slider-wrapper{
+        top: 5vh;
+        height: 50vh;
+        width: 90vw;
+    }
+    .slider img{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider-nav a{
+        margin-bottom: 12vh;
+    }
+    .footer_bg{
+        min-height: 80vh;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-col{
+        width: 25%;
+        margin-top: 4vh;
+    }
+    .footer-col h4{
+        left: -30vw;
+    }
+    .footer-col .about-us{
+        margin-left: 30vw;
+        top: -18vh;
+    }
+    .footer-col .about-us li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: -1rem;
+        padding: 0 55px;
+    }
+    .footer-col .char{
+        margin-left: 30vw;
+    }
+    .footer-col .char li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 3.5rem;
+        padding: 0 55px;
+    }
+    .footer-col .src{
+        top: -2vh;
+        margin-left: 40vw;
+    }
+    .footer-col .src li{
+        display: block;
+        margin-top: 0.2rem;
+        margin-left: -45vw;
+        padding: 0 10px;
+    }
+    .footer-col .s-med li{
+        display: inline-block;
+        margin-left: -55vw;
+        margin-top: 18rem;
+        padding: 0 55px;
+    }
+    .s-med{
+        left: 33vw;
+    }
+    #smedlink{
+        margin-top: 3rem;
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .logos{
+        height: 10vh;
+    }
+}
+@media screen and (max-width:541px){
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-left: 50px;
+        margin-top: 18px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 100vh;
+    }
+    #inner{
+        position: absolute;
+        top: 16.6rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 30vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 30vh;
+    }
+    .card2 p{
+        margin-right: 2vw;
+        right: 60vw;
+        width: 130px;
+        font-size: 12px;
+        top: 1vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 32vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: -2vh;
+        left: 30vw;
+    }
+    #stuart2{
+        max-height: 25vh;
+        max-width: 25vh;
+        margin-left: 40vw;
+        margin-top: 15vh;
+    }
+    #watch{
+        margin-top: 1vh;
+        margin-left: -35vw;
+        font-size: 10px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 30vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 30vh;
+    }
+    .card3 p{
+        margin-right: 1vw;
+        right: 60vw;
+        width: 130px;
+        font-size: 12px;
+        top: 1vh;
+    }
+    .card3{
+        top: -20vh;
+    }
+    #bob2{
+        max-height: 25vh;
+        max-width: 25vh;
+        margin-top: 15vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 10px;
+        margin-top: 10vh;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 10vh;
+        margin-left: 160px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 30vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 30vh;
+    }
+    .card4 p{
+        margin-right: 1vw;
+        right: 60vw;
+        width: 130px;
+        font-size: 12px;
+        top: 1vh;
+    }
+    .card4{
+        bottom: 25vh;
+    }
+    #kevin2{
+        max-height: 25vh;
+        max-width: 25vh;
+        margin-left: 38vw;
+        margin-top: 15vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 10px;
+        width: 150px;
+        margin-top: -3vh;
+    }
+    #play3{
+        margin-bottom: 50vh;
+        margin-left: 200px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_otto{
+        max-height: 25vh;
+        max-width: 25vh;
+        top: 4vh;
+        right: 23vh;
+    }
+    .card5 p{
+        margin-right: 10vw;
+        right: 63vw;
+        width: 100px;
+        font-size: 12px;
+        top: 2vh;
+    }
+    .card5{
+        bottom: 26vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -5vh;
+        margin-right: 20vw;
+        font-size: 10px;
+    }
+    #play4{
+        margin-bottom: 10vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .palabas{
+        position: relative;
+        margin-top: -10vh;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1.5rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 0.75rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: -14vh;
+        left: -7vh;
+        width: 30rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+        overflow: scroll;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: 2vh;
+        left: -7vh;
+        width: 30rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .slider-wrapper{
+        top: 2vh;
+        height: 45vh;
+        width: 80vw;
+    }
+    .container3{
+        height: 70vh;
+    }
+    .slider img{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider-nav{
+        margin-bottom: -7vh;
+    }
+    .footer_bg{
+        min-height: 30vh;
+        opacity: 0.3;
+    }
+    .footer-col{
+        width: 100%;
+    }
+    .footer-col h4{
+        font-family: 'Inclusive Sans';
+        font-size: 1.1rem;
+        display: inline-flex;
+        margin-left: 28vw;
+        width: 80%;
+        top: -10vh;
+    }
+    .footer-col ul{
+        position: absolute;
+        top: -15vh;
+    }
+    .footer-col ul li a{
+        display: inline-flex;
+        font-size: 0.8rem;
+        margin-left: 28vw;
+    }
+    .footer-col ul li .socmed1{
+        display: inline;
+        margin-left: 25.5vh;
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .stuart-vid{
+        width: 300px;
+    }
+    .trailer{
+        position: relative;
+        min-width: 110%;
+    }
+    .bob-vid{
+        width: 300px;
+    }
+    .trailer2{
+        position: relative;
+        min-width: 110%;
+    }
+    .kevin-vid{
+        width: 300px;
+    }
+    .trailer3{
+        position: relative;
+        min-width: 110%;
+    }
+    .otto-vid{
+        width: 300px;
+    }
+    .trailer4{
+        position: relative;
+        min-width: 110%;
+    }
+    .logos{
+        height: 10vh;
+    }
+}
+@media screen and (max-width:415px){
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-left: 20px;
+        margin-top: 18px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 100vh;
+    }
+    #inner{
+        position: absolute;
+        top: 14rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 56vw;
+        width: 130px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 22vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 5vh;
+        left: 5vw;
+    }
+    #stuart2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 40vw;
+        margin-top: 20vh;
+    }
+    #watch{
+        margin-top: -3vh;
+        margin-left: -35vw;
+        font-size: 10px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 54vw;
+        width: 130px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card3{
+        top: -20vh;
+    }
+    #bob2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-top: 2vh;
+        margin-left: 7vw;
+        font-size: 10px;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 52vw;
+        width: 100px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card4{
+        bottom: 15vh;
+    }
+    #kevin2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 10px;
+        width: 150px;
+        margin-top: -3vh;
+    }
+    #play3{
+        margin-top: 7vh;
+        margin-left: 70px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 25vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 25vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 52vw;
+        width: 100px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card5{
+        bottom: 19vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -5vh;
+        margin-right: 20vw;
+        font-size: 10px;
+    }
+    #play4{
+        margin-bottom: 10vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1.5rem;
+        margin-top: -1vh;
+    }
+    .una p{
+        margin-top: -2vh;
+        font-size: 0.75rem;
+    }
+    .card-video{
+        min-height: 8rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: -5vh;
+        left: -3vh;
+        width: 22rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+        overflow: scroll;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: 2vh;
+        left: -3vh;
+        width: 22rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .slider img{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider-nav{
+        margin-bottom: -7vh;
+    }
+    #giphy{
+        top: 9vh;
+        left: 62vw;
+    }
+    #giphy2{
+        margin-top: 9vh;
+        margin-left: -62vw;
+    }
+    .stuart-vid{
+        width: 300px;
+    }
+    .trailer{
+        position: relative;
+        min-width: 110%;
+    }
+    .bob-vid{
+        width: 300px;
+    }
+    .trailer2{
+        position: relative;
+        min-width: 110%;
+    }
+    .kevin-vid{
+        width: 300px;
+    }
+    .trailer3{
+        position: relative;
+        min-width: 110%;
+    }
+    .otto-vid{
+        width: 300px;
+    }
+    .trailer4{
+        position: relative;
+        min-width: 110%;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-col{
+        width: 25%;
+        margin-top: 6vh;
+    }
+    .footer-col h4{
+        left: -30vw;
+    }
+    .footer-col .about-us{
+        margin-left: 30vw;
+    }
+    .footer-col .about-us li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 2rem;
+        padding: 0 35px;
+    }
+    .footer-col .char{
+        margin-left: 27vw;
+    }
+    .footer-col .char li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 7rem;
+        padding: 0 35px;
+    }
+    .footer-col .src{
+        top: 5vh;
+        margin-left: 40vw;
+    }
+    .footer-col .src li{
+        display: block;
+        margin-left: -45vw;
+        padding: 0 10px;
+    }
+    .footer-col .s-med li{
+        display: inline-block;
+        margin-left: -55vw;
+        margin-top: 22rem;
+        padding: 0 25px;
+    }
+    .s-med{
+        left: 28vw;
+    }
+    #smedlink{
+        margin-top: 2rem;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width:393px){
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    header::-webkit-scrollbar{
+        display: none;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 19px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-top: 19px;
+        margin-left: 16px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: -18px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 100vh;
+    }
+    #inner{
+        position: absolute;
+        top: 22.5vh;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 49vw;
+        width: 130px;
+        font-size: 10px;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 22vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 5vh;
+        left: 5vw;
+    }
+    #stuart2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 40vw;
+        margin-top: 20vh;
+    }
+    #watch{
+        margin-top: -3vh;
+        margin-left: -35vw;
+        font-size: 10px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 49vw;
+        width: 130px;
+        font-size: 10px;
+    }
+    .card3{
+        top: -20vh;
+    }
+    #bob2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 10px;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 49vw;
+        width: 100px;
+        font-size: 10px;
+    }
+    .card4{
+        bottom: 15vh;
+    }
+    #kevin2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 10px;
+        width: 150px;
+        margin-top: -3vh;
+    }
+    #play3{
+        margin-top: 7vh;
+        margin-left: 70px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 50vw;
+        width: 100px;
+        font-size: 10px;
+    }
+    .card5{
+        bottom: 17vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -5vh;
+        margin-right: 20vw;
+        font-size: 10px;
+    }
+    #play4{
+        margin-bottom: 10vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1rem;
+        margin-top: -2vh;
+    }
+    .una p{
+        margin-top: -5vh;
+        font-size: 0.75rem;
+    }
+    .card-video{
+        height: 5rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: -15vh;
+        left: -6vh;
+        width: 22rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+        overflow: scroll;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: 2vh;
+        left: -6vh;
+        width: 22rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 105%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .slider-wrapper{
+        top: 2vh;
+        height: 45vh;
+        width: 80vw;
+    }
+    .container3{
+        height: 70vh;
+    }
+    .slider img{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider-nav a{
+        margin-bottom: 5vh;
+    }
+    .container5{
+        margin-left: 6%;
+    }
+    .footer_bg{
+        min-height: 80vh;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-col{
+        width: 25%;
+        margin-top: 6vh;
+    }
+    .footer-col h4{
+        left: -30vw;
+    }
+    .footer-col .about-us{
+        margin-left: 30vw;
+    }
+    .footer-col .about-us li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 2rem;
+        padding: 0 35px;
+    }
+    .footer-col .char{
+        margin-left: 27vw;
+    }
+    .footer-col .char li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 7rem;
+        padding: 0 35px;
+    }
+    .footer-col .src{
+        top: 7vh;
+        margin-left: 40vw;
+    }
+    .footer-col .src li{
+        display: block;
+        margin-left: -45vw;
+        padding: 0 10px;
+    }
+    .footer-col .s-med li{
+        display: inline-block;
+        margin-left: -55vw;
+        margin-top: 22rem;
+        padding: 0 20px;
+    }
+    .s-med{
+        left: 28vw;
+    }
+    #smedlink{
+        margin-top: 3rem;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    .stuart-vid{
+        width: 300px;
+    }
+    .trailer{
+        position: relative;
+        min-width: 110%;
+    }
+    .bob-vid{
+        width: 300px;
+    }
+    .trailer2{
+        position: relative;
+        min-width: 110%;
+    }
+    .kevin-vid{
+        width: 300px;
+    }
+    .trailer3{
+        position: relative;
+        min-width: 110%;
+    }
+    .otto-vid{
+        width: 300px;
+    }
+    .trailer4{
+        position: relative;
+        min-width: 110%;
+    }
+    .logos{
+        height: 10vh;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width:300px) {
+    header{
+        height: 5em;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0px; 
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        transition: background-color 0.4s ease-in-out;
+    }
+    header::-webkit-scrollbar{
+        display: none;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 16px;
+        margin-top: 10px;
+    }
+    .navbar ul{
+        display: none;
+    }
+    #button{
+        margin-top: 19px;
+        margin-left: 5px;
+    }
+    #links li{
+        display: block;
+        position: absolute;
+        left: -18px;
+    }
+    .bg{
+        min-height: 30vh;
+    }
+    .info{
+        position: relative;
+        bottom: 100vh;
+    }
+    #inner{
+        position: absolute;
+        top: 13.5rem;
+    }
+    #meet_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_stuart{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card2 p{
+        margin-right: 5vw;
+        right: 47vw;
+        width: 130px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card2::before{
+        content: "";
+        position: absolute; 
+        bottom: 27vh;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(10deg); 
+        transform-origin: right bottom; 
+    }
+    #play{
+        margin-top: 5vh;
+        left: 5vw;
+    }
+    #stuart2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 40vw;
+        margin-top: 20vh;
+    }
+    #watch{
+        margin-top: -3vh;
+        margin-left: -35vw;
+        font-size: 10px;
+    }
+    #meet_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_bob{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card3 p{
+        margin-right: 5vw;
+        right: 47vw;
+        width: 130px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card3{
+        top: -17vh;
+    }
+    #bob2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-top: 10vh;
+        left: 15px;
+    }
+    #watch2{
+        margin-left: 7vw;
+        font-size: 10px;
+    }
+    #play2{
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_kevin{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card4 p{
+        margin-right: 15vw;
+        right: 47vw;
+        width: 100px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card4{
+        bottom: 20vh;
+    }
+    #kevin2{
+        max-height: 20vh;
+        max-width: 20vh;
+        margin-left: 35vw;
+        margin-top: 10vh;
+    }
+    #watch3{
+        margin-left: -35vw;
+        font-size: 10px;
+        width: 150px;
+        margin-top: -3vh;
+    }
+    #play3{
+        margin-top: 7vh;
+        margin-left: 70px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    #meet_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 17vh;
+    }
+    #name_otto{
+        max-height: 20vh;
+        max-width: 20vh;
+        top: 4vh;
+        right: 17vh;
+    }
+    .card5 p{
+        margin-right: 15vw;
+        right: 47vw;
+        width: 100px;
+        font-size: 10px;
+        top: 1vh;
+    }
+    .card5{
+        bottom: 27vh;
+    }
+    .card5::before{
+        content: "";
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        background-color: #FFCC66; 
+        transform: skewY(-10deg); 
+        transform-origin: bottom right;
+    }
+    #otto2{
+        max-height: 20vh;
+        max-width: 20vh;
+        right: 5vw;
+        margin-top: 30vh;
+    }
+    #watch4{
+        margin-top: -5vh;
+        margin-right: 20vw;
+        font-size: 10px;
+    }
+    #play4{
+        margin-bottom: 10vh;
+        margin-left: 40px;
+        left: 5vw;
+        display: inline-block;
+        font-size: 10px;
+    }
+    .cards{
+        margin-top: -106vh;
+        background-color: #3e444e;
+        overflow-y: scroll;
+    }
+    .una{
+        max-width: calc(50% - 20px);
+    }
+    .una h2{
+        font-size: 1rem;
+        margin-top: -2vh;
+    }
+    .una p{
+        margin-top: -5vh;
+        font-size: 0.75rem;
+    }
+    .card-video{
+        height: 5rem;
+    }
+    .palabas{
+        flex-direction: column;
+        align-items: center;
+    }
+    #movie1{
+        width: 100vw;
+    }
+    #movie2{
+        width: 100vw;
+    }
+    #innermovie1{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie1 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #innermovie2{
+        width: 90vw;
+        height: 40vh;
+        position: absolute;
+        top: 4vh;
+    }
+    #innermovie2 img{
+        width: 90vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+    #overlay{
+        height: 0;
+        top: -0.1vh;
+        overflow: scroll;
+    }
+    #overlay h1{
+        font-size: 2rem;
+    }
+    #overlay p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: -10vh;
+        left: -6vh;
+        width: 22rem;
+    }
+    #overlay2{
+        height: 0;
+        bottom: 0.1vh;
+        overflow: scroll;
+    }
+    #overlay2 h1{
+        font-size: 2rem;
+        margin-top: 0.75rem;
+    }
+    #overlay2 p{
+        font-size: 0.75rem;
+        position: absolute;
+        top: 2vh;
+        left: -6vh;
+        width: 22rem;
+    }
+    #innermovie1:hover #overlay{
+        height: 106%;
+    }
+    #innermovie2:hover #overlay2{
+        height: 100%;
+    }
+    .logos{
+        top: 10vh;
+        z-index: 1;
+        height: 30vh;
+    }
+    .slider-wrapper{
+        top: 2vh;
+        height: 45vh;
+        width: 80vw;
+    }
+    .container3{
+        height: 70vh;
+    }
+    .slider img{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider-nav{
+        margin-bottom: -20vh;
+    }
+    #giphy{
+        display: none;
+    }
+    #giphy2{
+        display: none;
+    }
+    .card-video{
+        max-height: 5rem;
+    }
+    .logos{
+        height: 10vh;
+    }
+    .container5{
+        margin-left: 6%;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-col{
+        width: 25%;
+        margin-top: 6vh;
+    }
+    .footer-col h4{
+        left: -60vw;
+    }
+    .footer-col .about-us{
+        margin-left: 16vw;
+    }
+    .footer-col .about-us li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 2rem;
+        padding: 0 25px;
+    }
+    .footer-col .char{
+        margin-left: 12vw;
+    }
+    .footer-col .char li{
+        display: inline-block;
+        margin-left: -45vw;
+        margin-top: 7rem;
+        padding: 0 25px;
+    }
+    .footer-col .src{
+        top: 8vh;
+        margin-left: 20vw;
+    }
+    .footer-col .src li{
+        display: block;
+        margin-left: -45vw;
+        padding: 0 10px;
+    }
+    .footer-col .s-med li{
+        display: inline-block;
+        margin-left: -55vw;
+        margin-top: 22rem;
+        padding: 0 10px;
+    }
+    #smedlink{
+        top: -4rem;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+#text{
+    position: absolute;
+    color: #fad96d;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: -1;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#bob{
+    width: 500px;
+}
+#stuart{
+    width: 500px;
+}
+#otto{
+    width: 450px;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .intro{
+    height: 290px;
+    background: #4a6985;
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.card:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
+.container2{
+    width: 100vw;
+    height: 350vh;
+    top: 99.4vh;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.container2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 28%;
+    background-color: #FFCC66; 
+    transform: skewY(10deg); 
+    transform-origin: right bottom; 
+    z-index: -2;
+}
+.container2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 28%;
+    background-color: #FFCC66; 
+    transform: skewY(-10deg); 
+    transform-origin: right bottom; 
+    z-index: -2;
+}
+.inner{
+    width: 70vw;
+    height: 350vh;
+    position: absolute;
+    left: 15%;
+    top: 3rem;
+    overflow: hidden;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3), -5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #e8e1d6;
+}
+.card2{
+    width: 100vw;
+    height: 95vh;
+    position: relative; 
+    overflow: hidden; 
+}
+.card3{
+    width: 100vw;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+.card4{
+    width: 100vw;
+    height: 95vh;
+    position: relative; 
+    overflow: hidden; 
+}
+.card5{
+    width: 100vw;
+    height: 95vh;
+    margin-top: -10vh;
+    position: relative;
+    overflow: hidden;
+}
+.card2::before{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    background-color: #FFCC66; 
+    transform: skewY(10deg); 
+    transform-origin: right bottom; 
+}
+
+.card4::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    background-color: #3e444e;
+    transform: skewY(-3deg);
+    transform-origin: top left;
+}
+.card5::before{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    background-color: #FFCC66; 
+    transform: skewY(-10deg); 
+    transform-origin: bottom right;
+}
+#stuart2{
+    position: relative;
+    top: 50px;
+}
+#stuart2:hover{
+    transform: scale(1.2);
+}
+#bob2:hover{
+    transform: scale(1.2);
+}
+#kevin2:hover{
+    transform: scale(1.2);
+}
+#otto2:hover{
+    transform: scale(1.2);
+}
+#meet_stuart{
+    position: absolute;
+    height: 100px;
+    margin-bottom: 100vh;
+    margin-left: 40vw;
+}
+#name_stuart{
+    position: absolute;
+    height: 200px;
+    margin-top: 5vh;
+    margin-bottom: 100vh;
+    margin-left: 38vw;
+}
+#bob2{
+    position: relative;
+    top: 50px;
+    margin-left: 35vw;
+}
+#meet_bob{
+    position: absolute;
+    height: 100px;
+    margin-bottom: 100vh;
+    margin-left: 5vw;
+}
+#name_bob{
+    position: absolute;
+    height: 200px;
+    margin-top: 5vh;
+    margin-bottom: 100vh;
+    margin-left: 3.7vw;
+}
+#kevin2{
+    position: relative;
+    top: 50px;
+    z-index: 1;
+}
+#meet_kevin{
+    position: absolute;
+    height: 100px;
+    margin-bottom: 100vh;
+    margin-left: 40vw;
+    z-index: 1;
+}
+#name_kevin{
+    position: absolute;
+    height: 200px;
+    margin-top: 5vh;
+    margin-bottom: 100vh;
+    margin-left: 38vw;
+    z-index: 1;
+}
+#otto2{
+    position: relative;
+    top: 50px;
+    margin-left: 35vw;
+}
+#meet_otto{
+    position: absolute;
+    height: 100px;
+    margin-bottom: 100vh;
+    margin-top: 10vh;
+    margin-left: 5vw;
+}
+#name_otto{
+    position: absolute;
+    height: 200px;
+    margin-top: 15vh;
+    margin-bottom: 100vh;
+    margin-left: 3.7vw;
+}
+span{
+    font-weight: bold;
+}
+.card2 p{
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 41.3vw;
+    font-family: 'Inclusive Sans';
+}
+.card3 p{
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 6.5vw;
+    font-family: 'Inclusive Sans';
+}
+.card4 p{
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 41.3vw;
+    font-family: 'Inclusive Sans';
+    z-index: 1;
+}
+.card5 p{
+    position: absolute;
+    margin-top: 35vh;
+    margin-left: 6.5vw;
+    font-family: 'Inclusive Sans';
+}
+#play{
+    position: absolute;
+    top: 50vh;
+    margin-left: 12vw;
+    font-size: 100px;
+    color: #4a6985;
+}
+#play2{
+    position: absolute;
+    top: 50vh;
+    right: 70vw;
+    font-size: 100px;
+    color: #4a6985;
+}
+#play3{
+    position: absolute;
+    top: 50vh;
+    margin-left: 12vw;
+    font-size: 100px;
+    color: #4a6985;
+    z-index: 1;
+}
+#play4{
+    position: absolute;
+    top: 60vh;
+    right: 70vw;
+    font-size: 100px;
+    color: #4a6985;
+}
+#watch{
+    position: absolute;
+    font-family: 'Inclusive Sans';
+    top: 52vh;
+    left: 48vw;
+    bottom: 125px;
+}
+#watch2{
+    position: absolute;
+    font-family: 'Inclusive Sans';
+    top: 52vh;
+    left: 6.5vw;
+    bottom: 125px;
+}
+#watch3{
+    position: absolute;
+    font-family: 'Inclusive Sans';
+    top: 52vh;
+    left: 48vw;
+    bottom: 125px;
+    z-index: 1;
+}
+#watch4{
+    position: absolute;
+    font-family: 'Inclusive Sans';
+    top: 62vh;
+    left: 6.5vw;
+    bottom: 125px;
+}
+.trailer{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer .stuart-vid{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+.close{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+    max-height: 32px;
+}
+.trailer2{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer2.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer2 .bob-vid{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+.trailer3{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer3.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer3 .kevin-vid{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+.trailer4{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer4.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer4 .otto-vid{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+.info{
+    height: 197.4vh;
+    width: 100vw;
+}
+.palabas{
+    display: flex;
+    height: 100vh;
+    margin-bottom: 0;
+}
+.movie1{
+    position: relative;
+    top: 252vh;
+    height: 105vh;
+    width: 50vw;
+    background-color: #fad96d;
+}
+.movie2{
+    position: relative;
+    top: 252vh;
+    height: 105vh;
+    width: 50vw;
+    background-color: #A040C6;
+}
+.innermovie1{
+    background-color: white;
+    position: absolute;
+    top: 16vh;
+    left: 5vw;
+    width: 40vw;
+    height: 70vh;
+}
+.innermovie2{
+    background-color: white;
+    position: absolute;
+    top: 17vh;
+    left: 5vw;
+    width: 40vw;
+    height: 70vh;
+}
+.minion2015{
+    position: absolute;
+    top: 2vh;
+    height: 70vh;
+    width: 40vw;
+}
+.minion2020{
+    position: absolute;
+    height: 70vh;
+    width: 40vw;
+}
+.overlay{
+    position: absolute;
+    top: .04rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.overlay2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.innermovie1:hover .overlay{
+    height: 103%;
+}   
+.innermovie2:hover .overlay2{
+    height: 100%;
+}
+.overlay h1{
+    width: 100%;
+    margin-top: 7%;
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    text-align: center;
+    font-family: 'Martian Mono', cursive;
+}
+.overlay2{
+    width: 100%;
+    margin-top: 30%;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    text-align: center;
+    font-family: 'Martian Mono', cursive;
+}
+.overlay p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    margin: 50% 0 0 18%;
+    width: 70%;
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
+}
+.overlay2 p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    margin: 10% 0 0 18%;
+    width: 70%;
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
+}
+.cards{
+    height: 150vh;
+    width: 100%;
+    top: 257vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #3e444e;
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+         width: 150%;
+         height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+         width: auto;
+         height: 100%;
+    }
+}
+.una{
+    background-color: transparent;
+    width: 16.875rem;
+    margin: 0.625rem;
+}
+.card-video{
+    height: 9.375rem;
+    margin-bottom: 0.9375rem;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.vid-1{
+    background-image: url(image/minions_card1.jpg);
+}
+.vid-2{
+    background-image: url(image/minions_card2.jpg);
+}
+.vid-3{
+    background-image: url(image/minions_card3.jpg);
+}
+.vid-4{
+    background-image: url(image/about\ _bg.jpg);
+}
+.una h2{
+    padding: 10px;
+    text-align: center;
+}
+.una p{
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.una a{
+    background-color: #4a6985;
+    color: #fad96d;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 50px;
+}
+.una:hover{
+    background-color: rgb(62, 62, 62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+.read-more-text{
+    display: none;
+}
+.read-more-text--show{
+    display: inline;
+}
+.container4{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 350vh;
+}
+@keyframes slide{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    margin-top: -100vh;
+}
+.logos::before, .logos::after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.logos::before{
+    left: 0;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0), white);
+}
+.logos::after{
+    right: 0;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), white);
+}
+.logos:hover{
+    animation-play-state: paused;
+}
+.logos-slide{
+    display: inline-block;
+    animation: 25s slide infinite linear;
+}
+.logos-slide img{
+    height: 100px;
+    margin: 0 40px;
+}
+.container3{
+    padding: 2rem;
+    position: relative;
+    top: 275vh;
+    background-image: url(image/cr_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: fill;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #5E88FF;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+#footer_bg{
+    position: relative;
+    height: 60vh;
+    top: 275vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.footer{
+    position: absolute;
+    top: 800vh;
+    height: 30vh;
+}
+#giphy{
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    right: 20rem;
+    bottom: 15rem;
+}
+#giphy2{
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    left: 35rem;
+    bottom: 15rem;
+}
+.container5{
+    margin-left: 6%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col{
+    width: 25%;
+}
+.footer-col h4{
+    position: relative;
+    width: 100%;
+    padding: 0 10rem;
+    margin-top: -12vh;
+}
+.footer-col ul{
+    position: absolute;
+    margin-left: 6vw;
+}
+.footer-col ul li{
+    padding: 1rem 3rem;
+}
+.footer-col ul li a{
+    font-size: 1rem;
+}

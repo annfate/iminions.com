@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Minions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb6327783b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Martian+Mono:wght@600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Martian+Mono:wght@600&family=Roboto:wght@700&family=Zeyada&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+    <img src="image/banner8.jpg" alt="" class="bg">
+    <header id="header" class="header">
+        <a href="" class="logo"><img src="image/minions-seeklogo.com.png" alt="minions"></a>
+        <nav class="navbar" id="nav">
+            <ul class="main">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#inner">CHARACTERS</a></li>
+                <li><a href="#cards">ABOUT</a></li>
+            </ul>
+            <button class="hide-on-large-only material-symbols-outlined" id="button">menu</button>
+            <ul class="hide-on-large-only" id="links">
+                <li><a href="#" >HOME</a></li>
+                <br>
+                <li><a href="#inner" >CHARACTERS</a></li>
+                <br>
+                <li><a href="#cards" >ABOUT</a></li>
+                <br>
+            </ul>
+        </nav>
+    </header>
+    <div class="info">
+        <div class="container2">
+            <div class="inner" id="inner">
+                <div class="card2">
+                    <img src="image/meet.png" alt="stuart" id="meet_stuart" data-aos="fade-up">
+                    <img src="image/name_stuart.png" alt="name" id="name_stuart">
+                    <p><span>Stuart</span> is a one-eyed short Minion with combed hair. <br> He is playful, friendly, intelligent and funny; <br> He also seems to have a rebellious and obstreperous attitude. <br> Importantly, He loves playing his ukulele.</p>
+                    <img src="image/stuart2.png" alt="" id="stuart2">
+                    <a class="fa-solid fa-circle-play fa-beat" id="play" onclick="toggle();"></a>
+                    <h5 id="watch">WATCH A VIDEO OF STUART</h5>
+                </div>
+                <div class="card3">
+                    <img src="image/meet.png" alt="bob" id="meet_bob" data-aos="fade-up">
+                    <img src="image/name_bob.png" alt="name" id="name_bob"> 
+                    <p><span>Bob</span> is a Minion who is more childish and immature than most of the other Minions. <br> He is described as a "Little Brother" who finds love in anything and everything. <br> He is a short and bald minion with heterochromia - multi-colored eyes (green and brown).</p>
+                    <img src="image/bob3.png" alt="" id="bob2">
+                    <a class="fa-solid fa-circle-play fa-beat" id="play2" onclick="toggle2();"></a>
+                    <h5 id="watch2">WATCH A VIDEO OF BOB</h5>
+                </div>
+                <div class="card4">
+                    <img src="image/meet.png" alt="kevin" id="meet_kevin" data-aos="fade-up">
+                    <img src="image/name_kevin.png" alt="name" id="name_kevin">
+                    <p><span>Kevin</span> is the protagonist and leader of the trio in search of a new master. <br> He truly cares about the well-being of the Minion tribe.</p>
+                    <img src="image/kevin2.png" alt="" id="kevin2">
+                    <a class="fa-solid fa-circle-play fa-beat" id="play3" onclick="toggle3();"></a>
+                    <h5 id="watch3">WATCH A VIDEO OF KEVIN</h5>
+                </div>
+                <div class="card5">
+                    <img src="image/meet.png" alt="otto" id="meet_otto" data-aos="fade-up">
+                    <img src="image/name_otto.png" alt="" id="name_otto">
+                    <p><span>Otto</span> is a round, tall, and chubby minion with twelve sprouts of hair. <br> He is also wearing braces.</p>
+                    <img src="image/otto2.png" alt="" id="otto2">
+                    <a class="fa-solid fa-circle-play fa-beat" id="play4" onclick="toggle4();"></a>
+                    <h5 id="watch4">WATCH A VIDEO OF OTTO</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="video/Minions Stuart bath scene.mp4" controls="true" class="stuart-vid" id="stuart-vid"></video>
+        <img src="image/cross.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <div class="trailer2">
+        <video src="video/Minions - King Bob Scene _ Fandango Family.mp4" controls="true" class="bob-vid"></video>
+        <img src="image/cross.png" alt="" class="close" onclick="toggle2();">
+    </div>
+    <div class="trailer3">
+        <video src="video/Minions - The Minions Save The World! Scene _ Fandango Family.mp4" controls="true" class="kevin-vid"></video>
+        <img src="image/cross.png" alt="" class="close" onclick="toggle3();">
+    </div>
+    <div class="trailer4">
+        <video src="video/Minions_ The Rise of Gru (2022) - Otto's Pet Rock Scene _ Movieclips.mp4" controls="true" class="otto-vid"></video>
+        <img src="image/cross.png" alt="" class="close" onclick="toggle4();">
+    </div>
+    <div class="palabas" id="palabas">
+        <div class="movie1" id="movie1">
+            <div class="innermovie1" id="innermovie1">
+                <img src="image/minion2015.jpg" alt="" class="minion2015" id="minion2015">
+                <div class="overlay" id="overlay">
+                    <h1>MINIONS 2015</h1>
+                    <p>Ever since the dawn of time, the Minions have lived to serve the most despicable of masters. From the T-Rex to Napoleon, the easily distracted tribe has helped the biggest and the baddest of villains. Now, join protective leader Kevin, teenage rebel Stuart, and lovable little Bob on a global road trip. They'll earn a shot to work for a new boss, the world's first female supervillain, and try to save all of Minionkind from annihilation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="movie2" id="movie2">
+            <div class="innermovie2" id="innermovie2">
+                <img src="image/minion202.jpg" alt="" class="minion2020">
+                <div class="overlay2" id="overlay2">
+                    <h1>MINIONS 2022</h1>
+                    <p>In the heart of the 1970s, amidst a flurry of feathered hair and flared jeans, Gru (Steve Carell) is growing up in the suburbs. A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them. Luckily, he gets some mayhem-making back-up from his loyal followers, the Minions. Together, Kevin, Stuart, Bob, and Otto - a new Minion sporting braces and a desperate need to please - deploy their skills as they and Gru build their first lair, experiment with their first weapons, and pull off their first missions. When the Vicious 6 oust their leader, legendary fighter Wild Knuckles (Alan Arkin), Gru interviews to become their newest member. It doesn't go well (to say the least), and only gets worse after Gru outsmarts them and suddenly finds himself the mortal enemy of the apex of evil. On the run, Gru will turn to an unlikely source for guidance, Wild Knuckles, and discover that even bad guys need a little help from their friends.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards" id="cards">
+        <div class="una">
+            <div class="card-video vid-1"></div>
+            <h2>MUSIC</h2>
+            <p>Minions, those endearing and mischievous yellow creatures from the 'Despicable Me' movies, have a unique and infectious love for music. Whether they're spontaneously bursting into song, playing musical instruments in their own quirky way, or simply dancing to a catchy tune, Minions find joy and humor in the world of sound. <span class="read-more-text">Their love for music is a testament to their playful and carefree nature, making them even more lovable and entertaining characters in the world of animation.</span></p>
+            <span class="read-more-btn">Read More...</span>
+        </div>
+        <div class="una">
+            <div class="card-video vid-2"></div>
+            <h2>TEASE</h2>
+            <p>Minions, those lovable and yellow mischief-makers, have a knack for playful banter that knows no bounds. Whether they're poking fun at each other's antics, engaging in goofy competitions, or playfully ribbing their master, Gru, their teasing is an integral part of their camaraderie. Even their boss, with all his villainous aspirations, is not immune to their lighthearted jests. <span class="read-more-text">These endearing creatures infuse humor into every situation with their witty quips and spirited antics, proving that laughter truly knows no hierarchy in the world of the Minions.</span></p>
+            <span class="read-more-btn">Read More...</span>
+        </div>
+        <div class="una second-last" id="second-last">
+            <div class="card-video vid-3"></div>
+            <h2>LOYALTY</h2>
+            <p>Among the endearing qualities of Minions, their loyalty, courage, and mutual support stand out prominently. These little yellow creatures, despite their mischievous tendencies, are fiercely loyal to their leader, Gru, and to each other. When faced with adversity, they transform into resilient fighters, fearlessly tackling any obstacle that comes their way. <span class="read-more-text">Their camaraderie is heartwarming, and their willingness to stand by one another, no matter the circumstances, is a testament to the strength of their bond. In their world of mayhem and mischief, the Minions exemplify the true meaning of loyalty, bravery, and unwavering support, making them not only hilarious but also incredibly endearing.</span> </p>
+            <span class="read-more-btn">Read More...</span>
+        </div>
+        <div class="una last-una" id="last-una">
+            <div class="card-video vid-4"></div>
+            <h2>LANG.</h2>
+            <p>The Minions, those lovable, banana-obsessed, and mischievous creatures from the "Despicable Me" film franchise, are known for their hilarious and endearing form of communication known as Minionese. This peculiar language is a delightful blend of gibberish, nonsensical babbling, and borrowed words from various languages. It's a whimsical concoction of sounds, expressions, and gestures that defy formal grammar and structure. Minionese is a testament to the creators' creativity, adding a unique and comical dimension to the Minions' already entertaining personalities. <span class="read-more-text">What makes Minionese truly remarkable is its ability to convey emotion and meaning through tone and context, even without comprehensible words. Minions can express joy, confusion, fear, and excitement using this playful language, making it universally understood by audiences worldwide. The Minions' infectious laughter and camaraderie shine through in their interactions, and Minionese plays a significant role in establishing their endearing appeal. It's safe to say that Minionese is not just gibberish; it's the heart and soul of these beloved animated icons, adding an extra layer of charm to their already unforgettable presence in the world of entertainment.</span></p>
+            <span class="read-more-btn">Read More...</span>
+        </div>
+    </div>
+    <div class="container4" id="container4">
+        <div class="logos">
+            <div class="logos-slide">
+                <img src="image/logo_1.jpg" alt="">
+                <img src="image/logo_2.jpg" alt="">
+                <img src="image/giphy (8).gif" alt="">
+                <img src="image/logo_3.jpg" alt="">
+                <img src="image/logo_4.jpg" alt="">
+                <img src="image/giphy (6).gif" alt="">
+                <img src="image/logo_5.jpg" alt="">
+                <img src="image/logo_6.jpg" alt="">
+                <img src="image/giphy (7).gif" alt="">
+                <img src="image/logo_7.jpg" alt="">
+                <img src="image/giphy (3).gif" alt="">
+            </div>
+            <div class="logos-slide">
+                <img src="image/logo_1.jpg" alt="">
+                <img src="image/logo_2.jpg" alt="">
+                <img src="image/giphy (8).gif" alt="">
+                <img src="image/logo_3.jpg" alt="">
+                <img src="image/logo_4.jpg" alt="">
+                <img src="image/giphy (6).gif" alt="">
+                <img src="image/logo_5.jpg" alt="">
+                <img src="image/logo_6.jpg" alt="">
+                <img src="image/giphy (7).gif" alt="">
+                <img src="image/logo_7.jpg" alt="">
+                <img src="image/giphy (3).gif" alt="">
+            </div>
+        </div>
+    </div>
+    <section class="container3" id="container3">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img src="image/minion_of_steel.jpg" alt="" id="slide-1">
+                <img src="image/minion_rizz.jpg" alt="" id="slide-2">
+                <img src="image/minions_goblin.jpg" alt="" id="slide-3">
+                <img src="image/minions_007.jpg" alt="" id="slide-4">
+                <img src="image/minions_eat.jpg" alt="" id="slide-5">
+                <img src="image/minions_avenger.jpg" alt="" id="slide-6">
+                <img src="image/minions_sweet.jpg" alt="" id="slide-7">
+                <img src="image/minions_family.jpg" alt="" id="slide-8">
+                <img src="image/minions_two_colors.jpg" alt="" id="slide-9">
+                <img src="image/minions_funny.jpg" alt="" id="slide-10">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a>
+                <a href="#slide-7"></a>
+                <a href="#slide-8"></a>
+                <a href="#slide-9"></a>
+                <a href="#slide-10"></a>
+            </div>
+        </div>
+    </section>
+    <img src="image/footer_bg.jpg" alt="" id="footer_bg" class="footer_bg">
+    <footer class="footer" id="footer">
+        <div class="container5">
+            <img src="image/giphy.gif" alt="" id="giphy" data-aos="fade-left">
+            <img src="image/giphy2.gif" alt="" id="giphy2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul class="about-us">
+                        <li><a href="#cards">About Minions</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Minions</h4>
+                    <ul class="char">
+                        <li><a href="#cards">Language</a></li>
+                        <li><a href="#movie1">Movies</a></li>
+                        <li><a href="#inner">Characters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sources</h4>
+                    <ul class="src">
+                        <li><a href="#">Wallpaper Cave</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Minions Color Picker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="s-med-link" id="smedlink">Social Media Links</h4>
+                    <ul class="s-med">
+                        <li><a href="" class="socmed1"><i class="fab fa-facebook-f socmed"></i></a></li>
+                        <li><a href="" class="socmed1"><i class="fab fa-twitter socmed"></i></a></li>
+                        <li><a href="" class="socmed1"><i class="fab fa-instagram socmed"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+        const showLinksButton = document.getElementById('button');
+        const linksContainer = document.getElementById('links');
+        const header = document.getElementById('header');
+
+
+        showLinksButton.addEventListener('click', function() {
+
+            
+            if (linksContainer.style.display === 'none') {
+                linksContainer.style.display = 'block';
+        // header.style.height = '200px';
+           } else {
+            linksContainer.style.display = 'none';
+        // header.style.height = '50px';
+    }
+    
+});
+});
+    </script>
+    <script>
+        const parentContainer = document.querySelector('.cards');
+
+parentContainer.addEventListener('click', event => {
+    const current = event.target;
+    const isReadMoreBtn = current.classList.contains('read-more-btn');
+
+    if (!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read-more-text');
+    currentText.classList.toggle('read-more-text--show');
+
+    current.textContent = current.textContent.includes('Read More')
+        ? 'Read Less...'
+        : 'Read More...';
+});
+    </script>
+    <script>
+        document.addEventListener('scroll', ()=>{
+            const header = document.querySelector('.header');
+            if (window.scrollY > 0){
+                header.classList.add('scrolled');
+            }else{
+                header.classList.remove('scrolled');
+            }
+        })
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+   
+            document.querySelector('.loading-screen').style.display = 'none';
+
+ 
+            document.querySelector('.bg').style.display = 'block';
+            document.querySelector('.header').style.display = 'flex';
+});
+    </script>
+    <script>
+        function toggle(){
+            var trailer= document.querySelector(".trailer")
+            var video= document.querySelector(".stuart-vid")
+            trailer.classList.toggle("active")
+            video.pause();
+            video.currentTime = 0;  
+        }
+        function toggle2(){
+            var trailer2= document.querySelector(".trailer2")
+            var video2= document.querySelector(".bob-vid")
+            trailer2.classList.toggle("active")
+            video2.pause();
+            video2.currentTime = 0;    
+        }
+        function toggle3(){
+            var trailer3= document.querySelector(".trailer3")
+            var video3= document.querySelector(".kevin-vid")
+            trailer3.classList.toggle("active")
+            video3.pause();
+            video3.currentTime = 0;    
+        }
+        function toggle4(){
+            var trailer4= document.querySelector(".trailer4")
+            var video4= document.querySelector(".otto-vid")
+            trailer4.classList.toggle("active")
+            video4.pause();
+            video4.currentTime = 0;    
+        }
+    </script>
+    <script>
+        AOS.init({
+  offset: 20});
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.getElementById("links");
+    let isNavbarOpen = false;
+    const toggleButton = document.getElementById("button");
+
+    function toggleNavbar() {
+        if (isNavbarOpen) {
+            navbar.style.display = "none";
+            isNavbarOpen = false;
+        } else {
+            navbar.style.display = "block";
+            isNavbarOpen = true;
+        }
+    }
+
+
+    toggleButton.addEventListener("click", toggleNavbar);
+
+
+    window.addEventListener("scroll", function () {
+        if (isNavbarOpen) {
+            toggleNavbar(); 
+        }
+    });
+
+
+});
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
